@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="mbot_description">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.015933 1.3878E-17 -0.041873" rpy="0 0 0" />
+      <mass value="7.2669" />
+      <inertia ixx="0.073278" ixy="-1.3838E-17" ixz="0.0024897" iyy="0.080451" iyz="3.2716E-18" izz="0.14063" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="driving_wheel_left_Link">
+    <inertial>
+      <origin xyz="-2.7756E-17 2.7756E-17 -5.5511E-17" rpy="0 0 0" />
+      <mass value="0.52382" />
+      <inertia ixx="0.00066273" ixy="-1.1758E-19" ixz="4.3427E-19" iyy="0.0010154" iyz="1.2061E-18" izz="0.00066273" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/driving_wheel_left_Link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/driving_wheel_left_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="driving_wheel_left_Joint" type="continuous">
+    <origin xyz="0.0759349554718283 0.120000000000001 -0.0899999999999999" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="driving_wheel_left_Link" />
+    <axis xyz="0 1 0" />
+  </joint>
+  <link name="driving_wheel_right_Link">
+    <inertial>
+      <origin xyz="-1.3878E-17 -6.9389E-18 -5.5511E-17" rpy="0 0 0" />
+      <mass value="0.52382" />
+      <inertia ixx="0.00066273" ixy="-7.1413E-20" ixz="3.9242E-19" iyy="0.0010154" iyz="6.6159E-20" izz="0.00066273" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/driving_wheel_right_Link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/driving_wheel_right_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="driving_wheel_right_Joint" type="continuous">
+    <origin xyz="0.0759349554718304 -0.12 -0.0899999999999999" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="driving_wheel_right_Link" />
+    <axis xyz="0 1 0" />
+  </joint>
+  <link name="slaving_wheel_support_left_Link">
+    <inertial>
+      <origin xyz="-0.00501698807864759 -0.00740349670995302 -0.023532617322705" rpy="0 0 0" />
+      <mass value="0.00954061970353668" />
+      <inertia ixx="4.78189780301144E-06" ixy="4.18905250859912E-07" ixz="-8.46438620474034E-07" iyy="5.11619859392016E-06" iyz="-1.24907722394787E-06" izz="2.54856299267201E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/slaving_wheel_support_left_Link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/slaving_wheel_support_left_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="slaving_wheel_support_left_Joint" type="continuous">
+    <origin xyz="-0.11 0.11 -0.06962" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="slaving_wheel_support_left_Link" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <link name="slaving_wheel_left_Link">
+    <inertial>
+      <origin xyz="1.3878E-17 2.7756E-17 0" rpy="0 0 0" />
+      <mass value="0.044657" />
+      <inertia ixx="2.057E-05" ixy="-4.9805E-06" ixz="4.1965E-21" iyy="1.6595E-05" iyz="-9.9532E-21" izz="1.322E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/slaving_wheel_left_Link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/slaving_wheel_left_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="slaving_wheel_left_Joint" type="continuous">
+    <origin xyz="-0.0112195933660778 -0.0165565915785787 -0.0475777087639996" rpy="0 0 0" />
+    <parent link="slaving_wheel_support_left_Link" />
+    <child link="slaving_wheel_left_Link" />
+    <axis xyz="-0.82782957892894 0.560979668303882 0" />
+  </joint>
+  <link name="slaving_wheel_support_right_Link">
+    <inertial>
+      <origin xyz="-0.00891078923924538 -0.000761425012280416 -0.0235326173227048" rpy="0 0 0" />
+      <mass value="0.00954061970353668" />
+      <inertia ixx="5.39353153936192E-06" ixy="7.65207394395506E-08" ixz="-1.50337932495843E-06" iyy="4.50456485756967E-06" iyz="-1.28463438000195E-07" izz="2.54856299267201E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/slaving_wheel_support_right_Link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/slaving_wheel_support_right_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="slaving_wheel_support_right_Joint" type="continuous">
+    <origin xyz="-0.11 -0.11 -0.06962" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="slaving_wheel_support_right_Link" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <link name="slaving_wheel_right_Link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.0446566317929066" />
+      <inertia ixx="1.32976622205937E-05" ixy="-9.09773992865528E-07" ixz="8.00200307417021E-21" iyy="2.38668069196913E-05" iyz="7.98604915122304E-22" izz="1.32199222297701E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/slaving_wheel_right_Link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/slaving_wheel_right_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="slaving_wheel_right_Joint" type="continuous">
+    <origin xyz="-0.0199273807846288 -0.00170279037594397 -0.0475777087639996" rpy="0 0 0" />
+    <parent link="slaving_wheel_support_right_Link" />
+    <child link="slaving_wheel_right_Link" />
+    <axis xyz="-0.0851395187972008 0.996369039231439 0" />
+  </joint>
+  <link name="laser_radar_Link">
+    <inertial>
+      <origin xyz="-0.010461 9.6285E-06 -0.015895" rpy="0 0 0" />
+      <mass value="0.133" />
+      <inertia ixx="2.9153E-05" ixy="-3.209E-08" ixz="-1.0931E-08" iyy="3.8521E-05" iyz="-3.7934E-11" izz="6.0727E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/laser_radar_Link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://mbot_description/meshes/laser_radar_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="laser_radar_Joint" type="fixed">
+    <origin xyz="0.0844434086139717 -0.00791322541970714 0.0464887904065278" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="laser_radar_Link" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+
+  <link name="base_footprint"></link>
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint" />
+    <child link="base_link" />
+  </joint>
+
+  <!-- <transmission name="driving_wheel_left_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="driving_wheel_left_Joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="driving_wheel_left_motor">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="driving_wheel_right_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="driving_wheel_right_Joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="driving_wheel_right_motor">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission> -->
+
+
+  <gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <rosDebugLevel>Debug</rosDebugLevel>
+      <publishWheelTF>true</publishWheelTF>
+      <robotNamespace>/</robotNamespace>
+      <publishTf>1</publishTf>
+      <publishWheelJointState>true</publishWheelJointState>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>100.0</updateRate>
+      <legacyMode>true</legacyMode>
+      <leftJoint>driving_wheel_left_Joint</leftJoint>
+      <rightJoint>driving_wheel_right_Joint</rightJoint>
+      <wheelSeparation>0.38</wheelSeparation>
+      <wheelDiameter>0.12</wheelDiameter>
+      <broadcastTF>1</broadcastTF>
+      <wheelTorque>30</wheelTorque>
+      <wheelAcceleration>1.8</wheelAcceleration>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometryTopic>odom</odometryTopic>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+      <odometrySource>world</odometrySource>
+      <publishTf>1</publishTf>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="laser_radar_Link">
+    <sensor type="ray" name="rplidar">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>5.5</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>-3</min_angle>
+            <max_angle>3</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>6.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_rplidar" filename="libgazebo_ros_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>laser_radar_Link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="base_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+  <gazebo reference="laser_radar_Link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="driving_wheel_left_Link">
+    <mu1>10</mu1>
+    <mu2>10</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.1</maxVel>
+    <fdir1>1 0 0</fdir1>
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+  
+  <gazebo reference="driving_wheel_right_Link">
+    <mu1>10</mu1>
+    <mu2>10</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.1</maxVel>
+    <fdir1>1 0 0</fdir1>
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+
+  <gazebo reference="slaving_wheel_left_Link">
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1.0</maxVel>
+    <material>Gazebo/Green</material>
+  </gazebo>
+
+  <gazebo reference="slaving_wheel_right_Link">
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1.0</maxVel>
+    <material>Gazebo/Green</material>
+  </gazebo>
+
+  <gazebo reference="slaving_wheel_support_left_Link">
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1.0</maxVel>
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+  <gazebo reference="slaving_wheel_support_right_Link">
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1.0</maxVel>
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+</robot>
